@@ -45,6 +45,7 @@ export function registerTools(server: McpServer): void {
 
       // Auto-enable element selection in visible mode
       if (!headless) {
+        await page.waitForLoadState('load').catch(() => {});
         await overlayManager.start(page);
       }
 
