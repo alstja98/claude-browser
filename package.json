@@ -1,15 +1,49 @@
 {
   "name": "claude-browser",
   "version": "1.0.0",
-  "description": "Claude Code frontend browser plugin - visual element selection, component detection, source mapping",
+  "description": "Claude Code MCP server for frontend development - visual element selection, component detection, browser monitoring",
   "type": "module",
   "main": "dist/index.js",
+  "bin": {
+    "claude-browser": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "scripts",
+    ".claude-plugin",
+    "marketplace.json",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
     "start": "node dist/index.js",
-    "postinstall": "node scripts/postinstall.js && npm run build"
+    "prepublishOnly": "npm run build",
+    "postinstall": "node scripts/postinstall.js"
   },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "mcp",
+    "browser",
+    "frontend",
+    "devtools",
+    "react",
+    "vue",
+    "component-detection",
+    "playwright"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tnsqjahong/claude-browser.git"
+  },
+  "homepage": "https://github.com/tnsqjahong/claude-browser#readme",
+  "bugs": {
+    "url": "https://github.com/tnsqjahong/claude-browser/issues"
+  },
+  "license": "MIT",
+  "author": "tnsqjahong",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.0",
     "playwright": "^1.50.0",

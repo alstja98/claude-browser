@@ -13,17 +13,26 @@ Claude Code MCP server for frontend development. Launch a browser, visually insp
 
 ## Installation
 
+### npm (recommended)
+
 ```bash
 npm install claude-browser
 ```
 
-That's it. `postinstall` automatically:
+`postinstall` automatically:
 1. Installs Playwright Chromium
 2. Adds `claude-browser` to your project's `.mcp.json`
 
 Restart Claude Code or run `/mcp` to connect.
 
-### Manual setup (if needed)
+### Marketplace
+
+```
+/marketplace add https://github.com/tnsqjahong/claude-browser
+/plugin install claude-browser
+```
+
+### Manual setup
 
 Add to your `.mcp.json`:
 
@@ -53,7 +62,7 @@ This launches the browser and enables element selection mode.
 1. Hover over elements to see component info in a tooltip
 2. Click **"→ Claude Code"** button on the tooltip
 3. `[Component #1: <Header>]` is auto-typed into your chat
-4. Compose your message: `[Component #1: <Header>] 이거를 [Component #2: <Card>] 안으로 옮겨줘`
+4. Compose your message: `[Component #1: <Header>] Move this into [Component #2: <Card>]`
 5. Claude reads the full component details from `.claude-browser/selections/`
 
 ### Natural language
