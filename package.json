@@ -1,31 +1,31 @@
 {
   "name": "claude-browser",
-  "version": "1.0.0",
-  "description": "Claude Code MCP server for frontend development - visual element selection, component detection, browser monitoring",
+  "version": "2.0.0",
+  "description": "Claude Code CLI for frontend development - visual element selection, component detection, browser monitoring",
   "type": "module",
-  "main": "dist/index.js",
+  "main": "dist/cli.js",
   "bin": {
-    "claude-browser": "dist/index.js"
+    "claude-browser": "dist/cli.js"
   },
   "files": [
     "dist",
     "scripts",
+    "skills",
     ".claude-plugin",
-    "marketplace.json",
     "README.md",
     "LICENSE"
   ],
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
-    "start": "node dist/index.js",
+    "start": "node dist/cli.js",
     "prepublishOnly": "npm run build",
     "postinstall": "node scripts/postinstall.js"
   },
   "keywords": [
     "claude",
     "claude-code",
-    "mcp",
+    "cli",
     "browser",
     "frontend",
     "devtools",
@@ -45,9 +45,7 @@
   "license": "MIT",
   "author": "tnsqjahong",
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.12.0",
-    "playwright": "^1.50.0",
-    "zod": "^3.24.0"
+    "playwright": "^1.50.0"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

@@ -1,0 +1,15 @@
+{
+  "name": "claude-browser",
+  "description": "Browser automation for frontend development — visual element selection, component detection, and monitoring",
+  "owner": {
+    "name": "tnsqjahong"
+  },
+  "plugins": [
+    {
+      "name": "claude-browser",
+      "description": "Launch a browser, visually inspect elements, detect React/Vue/Svelte components, and monitor console/network/performance",
+      "version": "2.0.0",
+      "source": "./"
+    }
+  ]
+}

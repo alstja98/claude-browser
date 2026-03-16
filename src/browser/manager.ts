@@ -101,6 +101,11 @@ class BrowserManager {
     return this.state.isRunning;
   }
 
+  getCurrentUrl(): string | null {
+    if (!this.state.page || !this.state.isRunning) return null;
+    return this.state.page.url();
+  }
+
   getState(): BrowserState {
     return { ...this.state };
   }
